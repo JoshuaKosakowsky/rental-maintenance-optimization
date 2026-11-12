@@ -1,0 +1,32 @@
+# Local environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+outputs/*
+!outputs/README.md
+
+# Credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+gurobi.lic
+*.lic
+*.pem
+*.key
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+~$*
+
+# Original course documents stay outside this public repository.
+Proposed_Final_Project_Balanced_Rental_Maintenance_Team_Plan.docx
+ProjectGuidelines_F2026_TwoTracks.pdf

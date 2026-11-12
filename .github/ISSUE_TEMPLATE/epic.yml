@@ -1,0 +1,33 @@
+name: Parent deliverable
+description: Coordinate a substantial team deliverable and its native sub-issues.
+title: "[Parent] "
+labels: ["type:epic"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective and scope
+      description: State the deliverable and the relevant Track A requirement.
+    validations:
+      required: true
+  - type: input
+    id: lead
+    attributes:
+      label: Human lead and contributors
+      description: Use agreed names; do not guess GitHub handles.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Completion criteria and evidence
+      description: Define when the integrated deliverable is complete.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and exclusions
+  - type: markdown
+    attributes:
+      value: Attach actual tasks using GitHub's native sub-issue controls. Select the agreed milestone after creation.

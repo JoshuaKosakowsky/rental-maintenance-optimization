@@ -1,0 +1,25 @@
+name: Bug or incorrect result
+description: Reproduce a code, data, formulation, or reporting defect.
+title: "[Bug] "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps and inputs
+      description: Include the commit, scenario, and safe minimal input. Never include credentials or license contents.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and evidence
+      description: Python/solver version, solver status, failing check, and safe logs.
+    validations:
+      required: true

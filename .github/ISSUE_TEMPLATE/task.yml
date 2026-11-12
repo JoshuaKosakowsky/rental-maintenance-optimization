@@ -1,0 +1,38 @@
+name: Team task or sub-issue
+description: A scoped deliverable with acceptance and verification criteria.
+title: "[Task] "
+labels: ["type:task"]
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent issue reference
+      description: Enter the parent number/URL, then establish the native parent relationship after creation.
+  - type: input
+    id: lead
+    attributes:
+      label: Agreed human lead
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable and scope
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and unresolved decisions

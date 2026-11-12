@@ -1,0 +1,28 @@
+name: Scope or instructor decision
+description: Resolve a real ambiguity without silently choosing an assumption.
+title: "[Decision] "
+labels: ["type:decision"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Decision needed and source
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options and consequences
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Who can decide and by when
+    validations:
+      required: true
+  - type: textarea
+    id: effect
+    attributes:
+      label: Affected tasks and temporary scope boundary
+      description: State what can proceed while the question is open.

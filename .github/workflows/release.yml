@@ -1,0 +1,45 @@
+name: Source release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    uses: ./.github/workflows/ci.yml
+    permissions:
+      contents: read
+
+  source-archive:
+    needs: [checks]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version-file: .python-version
+      - name: Verify tag and approved main history
+        env:
+          VERSION_TAG: ${{ github.ref_name }}
+        run: |
+          [[ "$VERSION_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+      - name: Package committed source
+        run: python scripts/package_source.py --output dist/rental-maintenance-optimization-source.zip
+      - name: Create draft release for owner review
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION_TAG: ${{ github.ref_name }}
+        run: |
+          gh release create "$VERSION_TAG" \
+            dist/rental-maintenance-optimization-source.zip \
+            --verify-tag --draft --generate-notes --title "$VERSION_TAG"
