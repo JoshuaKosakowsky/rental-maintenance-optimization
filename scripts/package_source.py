@@ -38,6 +38,8 @@ def main() -> None:
         )
         with zipfile.ZipFile(archive) as zipped:
             for item in zipped.infolist():
+                if item.is_dir():
+                    continue
                 if problem := path_problem(item.filename):
                     raise SystemExit(f"Unsafe archive member {item.filename}: {problem}")
                 if ((item.external_attr >> 16) & 0o170000) == 0o120000:
