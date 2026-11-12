@@ -24,9 +24,12 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
         with:
-          python-version-file: .python-version
+          version: "0.12.19"
+          enable-cache: false
+      - name: Install pinned Python
+        run: uv python install
       - name: Verify tag and approved main history
         env:
           VERSION_TAG: ${{ github.ref_name }}
@@ -34,7 +37,7 @@ jobs:
           [[ "$VERSION_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ ]]
           git merge-base --is-ancestor "$GITHUB_SHA" origin/main
       - name: Package committed source
-        run: python scripts/package_source.py --output dist/rental-maintenance-optimization-source.zip
+        run: uv run --no-project python scripts/package_source.py --output dist/rental-maintenance-optimization-source.zip
       - name: Create draft release for owner review
         env:
           GH_TOKEN: ${{ github.token }}

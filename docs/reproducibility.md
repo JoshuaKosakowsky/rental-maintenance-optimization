@@ -6,6 +6,11 @@ Python is pinned to 3.12.14 and uv to 0.12.19. `pyproject.toml` declares Gurobi
 13.0.3 and the approved development tools. `uv.lock` records exact dependency
 resolution; exported requirements include package hashes for pip users.
 
+CI installs the pinned Python through uv's managed Python distribution on each
+platform. Gurobi 13.0.3 matches the locally verified version-13 license; an initial
+version-14 check correctly failed rather than being skipped. Major solver updates
+require an explicit compatibility review and are excluded from automatic update PRs.
+
 Use the README's uv or pip path to install the editable `rental_maintenance`
 package. Both paths use the same locked runtime/development dependencies.
 Hatchling is included in development requirements so the documented pip editable
