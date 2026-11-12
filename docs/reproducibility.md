@@ -66,3 +66,15 @@ package and compares the key numerical results within documented tolerances.
 Equivalent optimal assignments are acceptable when feasibility/objective agree.
 Record the environment and evidence; do not require a particular tie solution
 unless the team explicitly specifies a tie-breaking rule.
+
+## Editable installs and cloud-synced checkouts
+
+The development lock includes `editables==0.6`, which Hatchling needs for the
+documented pip editable install with build isolation disabled. Runtime users
+only need `requirements.txt`; contributors use `requirements-dev.txt`.
+
+A generated environment in the owner's OneDrive checkout repeatedly acquired
+malformed metadata names during setup. Keep environments outside cloud sync if
+this occurs; do not commit them or alter dependency versions to hide the failure.
+The owner's Mac uses an ignored `.venv` link to a local cache environment. This is
+a machine-local setup detail; other clones create their own environment normally.

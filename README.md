@@ -17,7 +17,9 @@ Gurobi installation check. It does not establish that the project is complete.
 ## Start here
 
 1. Read [the requirements](docs/requirements.md) and [team plan](docs/team-plan.md).
-2. Find your parent issue and task in [GitHub Issues](https://github.com/JoshuaKosakowsky/rental-maintenance-optimization/issues).
+2. Find your task in the [Project](https://github.com/users/JoshuaKosakowsky/projects/3),
+   [parent/sub-issues](https://github.com/JoshuaKosakowsky/rental-maintenance-optimization/issues),
+   and [dated milestones](https://github.com/JoshuaKosakowsky/rental-maintenance-optimization/milestones).
 3. Follow [CONTRIBUTING](CONTRIBUTING.md) to branch, change, test, and open a PR.
 4. Put reusable Python functions in `src/rental_maintenance/`; small shared
    helpers belong in `src/rental_maintenance/common/` when they have real callers.

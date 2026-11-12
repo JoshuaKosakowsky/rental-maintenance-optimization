@@ -7,11 +7,13 @@ The [policy for this repository](ai-reviewer.md) governs the new role.
 
 ## Account and enforcement
 
-JoshKozy requires accepted collaborator Write access for eligible reviews/merges
+JoshKozy accepted the invitation; collaborator Write access was verified on
+November 11, 2026 (America/Denver). This supports eligible reviews/merges
 in the reference arrangement. Write access is not a technical prohibition on
 editing branches; the separately restricted reviewer broker must expose only
 review/read/merge tools. Main protections provide an additional server-side gate.
-See `repository-setup.md` for observed invitation and protection state.
+See [repository setup](repository-setup.md) for access and protection evidence.
+The remaining PC setup is tracked in [issue #12](https://github.com/JoshuaKosakowsky/rental-maintenance-optimization/issues/12).
 
 ## Windows operator setup remains to be verified
 
@@ -22,7 +24,7 @@ this project. Cloning this repo does not install or launch an AI agent.
 
 On the Windows PC, an authorized operator must:
 
-1. Accept the collaborator invitation while signed in as JoshKozy.
+1. Confirm the accepted JoshKozy identity in the separate reviewer profile.
 2. Configure a dedicated or explicitly scoped reviewer connection for
    `JoshuaKosakowsky/rental-maintenance-optimization`, using this repo's policy.
 3. Verify only the six equivalent read/review/merge capabilities are exposed and
