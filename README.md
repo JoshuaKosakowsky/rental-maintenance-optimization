@@ -8,11 +8,12 @@ eight repairs across six houses, three contractors, and one week. The data will
 be synthetic and justified. Exact appointments and travel routing are outside
 the proposal's scope.
 
-**Current status: repository foundation only.** The dataset, mathematical
-formulation, project optimizer, greedy benchmark, numerical results, and final
-report are team tasks; they are not implemented or verified yet. CI currently
-checks the development environment and repository safety, including a tiny
-Gurobi installation check. It does not establish that the project is complete.
+**Current status:** Dora has prepared a draft dataset and report section for team
+review. The draft proposes a larger workload, overtime, and deferral. See the
+[data notes](data/README.md) for the files and open scope decisions. The
+formulation, optimizer, greedy benchmark, numerical results, and integrated
+report are pending. CI checks the development environment and repository
+safety, including a tiny Gurobi installation check.
 
 ## Start here
 

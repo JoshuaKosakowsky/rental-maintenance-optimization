@@ -1,5 +1,22 @@
 # Current handoff
 
+## Dora's draft inputs and report section
+
+- Branch `codex/14-dora-draft-inputs`. Dora (`chinchillad-ux`) prepared two
+  synthetic workbooks and the problem, data, and assumptions draft. The
+  [data notes](data/README.md) link the three original-format files.
+- Checked all three Office packages and matched their SHA-256 hashes against
+  the supplied files. Checked workbook keys, complete cells, base/scenario
+  selection, quote references, and C's zero regular and overtime capacity.
+- On Windows, `uv sync --locked`, `uv run --locked ruff check .`,
+  `uv run --locked ruff format --check .`, `uv run --locked pytest` (2 passed),
+  and `uv run --locked python scripts/check_repository.py` passed.
+- Before using the draft data in the model, confirm the 40-job scope, overtime,
+  deferral, and schema decisions with the team. The import checks covered data
+  consistency. Model feasibility and results still require separate verification.
+
+## Repository foundation
+
 The public repository foundation is ready for team implementation. Start at the
 [README](README.md) and [Project](https://github.com/users/JoshuaKosakowsky/projects/3).
 

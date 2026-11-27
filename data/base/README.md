@@ -1,5 +1,7 @@
 # Base case inputs
 
-Dora will supply the documented synthetic base tables after the schema is agreed
-with Josh and Izzy. The intended case has eight repairs, six houses, and three
-contractors. This directory intentionally contains no invented sample dataset.
+Dora's [draft base workbook](rental_maintenance_data_40_jobs.xlsx) contains
+40 base repairs across 20 houses, labor capacity for three contractor companies,
+and eligible quotes. Select jobs with `BaseJob = 1` and their matching quotes.
+J41 and J42 are reserved for the added-repair scenario. See the
+[data notes](../README.md) for the schema and pending scope decisions.
