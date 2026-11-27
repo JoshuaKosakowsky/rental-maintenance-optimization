@@ -12,6 +12,13 @@ Verification evidence for the setup is recorded in `docs/repository-setup.md` an
 the associated GitHub Actions runs. Environment tests are distinct from the future
 independent model verification led by Josh.
 
+## Dora's draft input intake
+
+Joshua used Codex to organize Dora's supplied workbooks and draft section,
+check their consistency, and document the proposed scope and file provenance.
+The Office files are byte-for-byte copies. Dora's AI-use statement for her
+dataset and writing is included in her [draft section](reports/sections/Rental_Maintenance_Problem_and_Data_draft.docx).
+
 ## Automated reviewer disclosure
 
 JoshKozy is a fully AI reviewer operated for Joshua. Both JoshKozy and
